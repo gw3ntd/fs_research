@@ -17,3 +17,17 @@
     6. Non-Hispanic Two or More Race Groups -> **2 or more**
     7. Non-Hispanic White alone -> **W**
 - **d5:** Children in immigrant families (Number & Percent)
+
+## Economics
+- **econ1:** % of children in extreme poverty
+- **econ2:** % of children in families that recieve public assistance
+- **econ3:** % of children in poverty
+- **econ4:** % of children living in crowded housing
+- **econ5:** % of Children living in households that are owned
+- **econ6:** % of Children living in households with a high housing cost burden
+- **econ7:** % of Children whose parents lack secure employment
+- **econ8:** % of Children with at least one unemployed parent
+- **econ9:** % of Low-income working families with children
+- **econ10:** Median family income among households with children
+- **econ11:** Unemployment rate of parents
+- **econ12:** % of Youth not attending school and not working by age group
