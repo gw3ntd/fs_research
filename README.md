@@ -17,5 +17,3 @@
     6. Non-Hispanic Two or More Race Groups -> **2 or more**
     7. Non-Hispanic White alone -> **W**
 - **d5:** Children in immigrant families (Number & Percent)
-- **d6:** Children in immigrant families in which resident parents are not U.S. citizens (Number & Percent)
-- **d7:** Children in immigrant families in which resident parents have been in the country five years or less (Number & Percent)

@@ -137,9 +137,12 @@ childreninimmigrantfams.rename(columns={'Data': 'd5'}, inplace=True)
 
 #####################################################################################
 
-merge_1 = pd.merge(childpopbyagegroup, childpopbygender, on='LocYear')
-# merge_2 = pd.merge(merge_1, childpopbynativity, on='LocYear')
-merge_3 = pd.merge(merge_1, childpopbyraceandethnicity, on='LocYear')
-# merge_4 = pd.merge(merge_3, childreninimmigrantfams, on='LocYear')
+merge_1 = pd.merge(childpopbyagegroup, childpopbygender, on='LocYear', how="outer")
+print(merge_1.shape)
+merge_2 = pd.merge(merge_1, childpopbynativity, on='LocYear', how="outer")
+print(merge_2.shape)
+merge_3 = pd.merge(merge_2, childpopbyraceandethnicity, on='LocYear', how="outer")
 print(merge_3.shape)
-merge_3.to_csv('demographics.csv')
+merge_4 = pd.merge(merge_3, childreninimmigrantfams, on='LocYear', how="outer")
+print(merge_4.shape)
+merge_4.to_csv('demographics.csv') # new one without dropping missing data 
