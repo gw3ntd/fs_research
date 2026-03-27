@@ -67,7 +67,7 @@
 - **fam18:** Young adults ages 18 to 24 who voted in the last midterm election
 - **fam19:** Young adults ages 18 to 24 who voted in the last presidential election
 
-## Heath
+## Health
 - **hth1_2:** 2-year-olds who were immunized
 - **hth3_4:** Births to mothers who smoked during pregnancy
 - **hth5_6:** Births to mothers with less than 12 years of education
