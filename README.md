@@ -52,3 +52,42 @@
 - **educ17:** High school students not graduating on time
 - **educ18:** Young adults ages 18 to 24 not attending school, not working, and no degree beyond high school
 - **educ19:** Young adults ages 18 to 24 who are enrolled in or have completed college
+
+## Family and Community
+- **fam1:** Children by household heads educational attainment
+- **fam4:** Children in single-parent families
+- **fam5:** Children in the care of grandparents
+- **fam7:** Children living with cohabiting domestic partners
+- **fam8:** Children living with neither parent
+- **fam9_10:** Children who had a parent who was ever incarcerated
+- **fam11_12:** Children who have experienced two or more adverse experiences
+- **fam13_14:** Children who live in unsafe communities
+- **fam15:** Children who speak a language other than English at home
+- **fam16:** Total teen births
+- **fam18:** Young adults ages 18 to 24 who voted in the last midterm election
+- **fam19:** Young adults ages 18 to 24 who voted in the last presidential election
+
+## Heath
+- **hth1_2:** 2-year-olds who were immunized
+- **hth3_4:** Births to mothers who smoked during pregnancy
+- **hth5_6:** Births to mothers with less than 12 years of education
+- **hth7:** Births to unmarried women
+- **hth8_9:** Births to women receiving late or no prenatal care
+- **hth10:** Child and teen death rate
+- **hth11:** Child deaths
+- **hth12:** Children age 18 and below without health insurance
+- **hth13:** Children and teens with anxiety or depression
+- **hth14:** Children who have a parent with no health insurance
+- **hth151617:** Children who have one or more emotional, behavioral, or developmental conditions
+- **hth1819:** Children who have received preventive dental care in the past year
+- **hth2021:** Children whose teeth are in excellent or very good condition
+- **hth2223:** Children with asthma problems
+- **hth2425:** Children with special health care needs
+- **hth26:** High school students who felt sad or hopeless during the past year
+- **hth27:** Infant mortality
+- **hth28:** Low birth-weight babies
+- **hth29:** Parents without health insurance
+- **hth30:** Preterm births
+- **hth31:** Teen deaths from all causes
+- **hth32:** Total births
+- **hth33:** Total teen births
