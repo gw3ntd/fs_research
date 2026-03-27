@@ -91,3 +91,17 @@
 - **hth31:** Teen deaths from all causes
 - **hth32:** Total births
 - **hth33:** Total teen births
+
+## Safety
+- **safe1_2_3:** Binge alcohol drinking among youths by age group
+- **safe4:** Children entering foster care
+- **safe5:** Children exiting foster care
+- **safe6:** Children in child welfare system who have been adopted
+- **safe7:** Children in foster care waiting for adoption
+- **safe9_10:** Children who are confirmed by child protective services as victims of maltreatment
+- **safe1112:** Children who are confirmed by child protective services as victims of maltreatment by maltreatment type
+- **safe1415:** Cigarette use in the past month by age group
+- **safe161718:** Illicit drug use other than marijuana by age group
+- **safe1920:** Marijuana use by age group
+- **safe212223:** Teens ages 12 to 17 who abused alcohol or drugs in the past year
+- **safe24:** Youth residing in juvenile detention, correctional and_or residential facilities
