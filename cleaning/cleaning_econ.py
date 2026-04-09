@@ -54,3 +54,31 @@ Data columns (total 16 columns):
 dtypes: float64(11), int64(1), str(4)
 memory usage: 200.2 KB
 '''
+
+econ.replace('S', 0.10, inplace=True)
+econ.replace('N.A.', np.nan, inplace=True)
+econ.replace('N.A.!', np.nan, inplace=True)
+econ.replace('*', np.nan, inplace=True)
+econ.replace('N.C.', np.nan, inplace=True)
+econ.replace('<.5%', 0, inplace=True)
+econ.replace('<500', 500, inplace=True)
+
+econ['econ7'] = econ['econ7'].astype(float)
+econ['econ12: 16-19'] = econ['econ12: 16-19'].astype(float)
+econ['econ12: 20-24'] = econ['econ12: 20-24'].astype(float)
+
+imputed = econ.copy()
+imputed = impute(econ, imputed)
+make_plots(econ, imputed)
+
+'''
+possibly bad list
+econ2
+econ5
+econ6
+econ8
+econ9
+econ10
+econ11
+econ12
+'''
