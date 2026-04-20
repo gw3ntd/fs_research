@@ -1,25 +1,28 @@
 import pandas as pd #type: ignore
 from making_csv import clean_csv
 
-p1 = r"excel/education/Children by household heads educational attainment.xlsx"
-p2 = r"excel/education/Children who have been expelled from school.xlsx"
-p3 = r"excel/education/Children who have been suspended from school.xlsx"
-p4 = r"excel/education/Children who have difficulty speaking English.xlsx"
-p5 = r"excel/education/Children who missed 11 or more days of school per year due to illness or injury.xlsx"
-p6 = r"excel/education/Educational attainment of population ages 25 to 34.xlsx"
-p7 = r"excel/education/Eighth grade math achievement levels.xlsx"
-p8 = r"excel/education/Eighth grade reading achievement levels.xlsx"
-p9 = r"excel/education/Eighth grade writing achievement levels.xlsx"
-p10 = r"excel/education/Fourth grade math achievement levels.xlsx"
-p11 = r"excel/education/Fourth grade science achievement levels.xlsx"
-p12 = r"excel/education/Fourth grade writing achievement levels.xlsx"
-p13 = r"excel/education/Fourth graders who are chronically absent from school.xlsx"
-p14 = r"excel/education/Fourth graders who scored below proficient reading level by family income.xlsx"
-p15 = r"excel/education/Fourth graders who scored below proficient reading level by school income.xlsx"
-p16 = r"excel/education/Head Start enrollment by age group.xlsx"
-p17 = r"excel/education/High school students not graduating on time.xlsx"
-p18 = r"excel/education/Young adults ages 18 to 24 not attending school, not working, and no degree beyond high school.xlsx"
-p19 = r"excel/education/Young adults ages 18 to 24 who are enrolled in or have completed college .xlsx"
+p1 = r"../excel/education/Children by household heads educational attainment.xlsx"
+p2 = r"../excel/education/Children who have been expelled from school.xlsx"
+p3 = r"../excel/education/Children who have been suspended from school.xlsx"
+p4 = r"../excel/education/Children who have difficulty speaking English.xlsx"
+p5 = r"../excel/education/Children who missed 11 or more days of school per year due to illness or injury.xlsx"
+p5_2 = r"../excel/education/p5.xlsx"
+p6 = r"../excel/education/Educational attainment of population ages 25 to 34.xlsx"
+p7 = r"../excel/education/Eighth grade math achievement levels.xlsx"
+p8 = r"../excel/education/Eighth grade reading achievement levels.xlsx"
+p9 = r"../excel/education/Eighth grade writing achievement levels.xlsx"
+p10 = r"../excel/education/Fourth grade math achievement levels.xlsx"
+p11 = r"../excel/education/Fourth grade science achievement levels.xlsx"
+p12 = r"../excel/education/Fourth grade writing achievement levels.xlsx"
+p13 = r"../excel/education/Fourth graders who are chronically absent from school.xlsx"
+p14 = r"../excel/education/Fourth graders who scored below proficient reading level by family income.xlsx"
+p15 = r"../excel/education/Fourth graders who scored below proficient reading level by school income.xlsx"
+p16 = r"../excel/education/Head Start enrollment by age group.xlsx"
+p17 = r"../excel/education/High school students not graduating on time.xlsx"
+p17_2 = r"../excel/education/p17.xlsx"
+p18 = r"../excel/education/Young adults ages 18 to 24 not attending school, not working, and no degree beyond high school.xlsx"
+p18_2 = r"../excel/education/p18.xlsx"
+p19 = r"../excel/education/Young adults ages 18 to 24 who are enrolled in or have completed college .xlsx"
 
 value_mapping = {
     'United States': 'US',
@@ -103,9 +106,14 @@ df4.rename(columns={"Data": "educ4"}, inplace=True)
 
 
 df5 = clean_csv(p5, value_mapping, column_name='Age group', yearmap=True)
+
+df5_2 = clean_csv(p5_2, value_mapping, column_name='Age group', yearmap=True)
+df5 = pd.concat([df5, df5_2], axis=0)
+
 df5.rename(columns={"12 to 17": "educ5: 3", "6 to 11": "educ5: 1", 
                     "6 to 17": "educ5: 2"}, inplace=True)
 # print(df5.head())
+
 
 df6 = clean_csv(p6, value_mapping, column_name='Education')
 educ_level2={"Associate Degree": "educ6: A", 
@@ -199,10 +207,17 @@ df16.rename(columns={"3": "educ16: 3y", "4": "educ16: 4y",
 # print(df16.head())
 
 df17 = clean_csv(p17, value_mapping, yearmap=True)
+df17_2 = clean_csv(p17_2, value_mapping, yearmap=True)
+
+df17 = pd.concat([df17, df17_2], axis=0)
 df17.rename(columns={"Data": "educ17"}, inplace=True)
 # print(df17.head())
 
 df18 = clean_csv(p18, value_mapping)
+
+df18_2 = clean_csv(p18_2, value_mapping, yearmap=True)
+
+df17 = pd.concat([df18, df18_2], axis=0)
 df18.rename(columns={"Data": "educ18"}, inplace=True)
 # print(df18.head())
 
@@ -248,4 +263,4 @@ print(merge_17.shape)
 merge_18 = pd.merge(merge_17, df19, on='LocYear', how="outer")
 print(merge_18.shape)
 
-merge_18.to_csv('educ.csv')
+merge_18.to_csv('../final_csv/educ.csv')

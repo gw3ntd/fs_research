@@ -1,28 +1,28 @@
 import pandas as pd # type: ignore
 from making_csv import clean_csv
 
-p1 = r"excel/family/Children by household heads educational attainment.xlsx"
+p1 = r"../excel/family/Children by household heads educational attainment.xlsx"
 
-p4 = r"excel/family/Children in single-parent families.xlsx"
-p5 = r"excel/family/Children in the care of grandparents.xlsx"
+p4 = r"../excel/family/Children in single-parent families.xlsx"
+p5 = r"../excel/family/Children in the care of grandparents.xlsx"
 
-p7 = r"excel/family/Children living with cohabiting domestic partners.xlsx"
-p8 = r"excel/family/Children living with neither parent.xlsx"
+p7 = r"../excel/family/Children living with cohabiting domestic partners.xlsx"
+p8 = r"../excel/family/Children living with neither parent.xlsx"
 
-p9 = r"excel/family/Children who had a parent who was ever incarcerated 2.xlsx"
-p10 = r"excel/family/Children who had a parent who was ever incarcerated.xlsx"
+p9 = r"../excel/family/Children who had a parent who was ever incarcerated 2.xlsx"
+p10 = r"../excel/family/Children who had a parent who was ever incarcerated.xlsx"
 
-p11 = r"excel/family/Children who have experienced two or more adverse experiences 2.xlsx"
-p12 = r"excel/family/Children who have experienced two or more adverse experiences.xlsx"
+p11 = r"../excel/family/Children who have experienced two or more adverse experiences 2.xlsx"
+p12 = r"../excel/family/Children who have experienced two or more adverse experiences.xlsx"
 
-p13 = r"excel/family/Children who live in unsafe communities 2.xlsx"
-p14 = r"excel/family/Children who live in unsafe communities.xlsx"
+p13 = r"../excel/family/Children who live in unsafe communities 2.xlsx"
+p14 = r"../excel/family/Children who live in unsafe communities.xlsx"
 
-p15 = r"excel/family/Children who speak a language other than English at home.xlsx"
-p16 = r"excel/family/Total teen births.xlsx"
+p15 = r"../excel/family/Children who speak a language other than English at home.xlsx"
+p16 = r"../excel/family/Total teen births.xlsx"
 
-p18 = r"excel/family/Young adults ages 18 to 24 who voted in the last midterm election.xlsx"
-p19 = r"excel/family/Young adults ages 18 to 24 who voted in the last presidential election.xlsx"
+p18 = r"../excel/family/Young adults ages 18 to 24 who voted in the last midterm election.xlsx"
+p19 = r"../excel/family/Young adults ages 18 to 24 who voted in the last presidential election.xlsx"
 
 value_mapping = {
     'United States': 'US',
