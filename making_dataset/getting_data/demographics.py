@@ -1,13 +1,13 @@
 import pandas as pd # type: ignore
 from making_csv import clean_csv
 
-file_path1 = r'excel/demographics/Child population by age group.xlsx'
-file_path2 = r'excel/demographics/Child population by gender.xlsx'
-file_path3 = r'excel/demographics/Child population by nativity (4).xlsx'
-file_path4 = r'excel/demographics/Child population by race and ethnicity.xlsx'
-file_path5 = r'excel/demographics/Children in immigrant families in which resident parents are not U.S. citizens.xlsx'
-file_path6 = r'excel/demographics/Children in immigrant families in which resident parents have been in the country five years or less.xlsx'
-file_path7 = r'excel/demographics/Children in immigrant families.xlsx'
+file_path1 = r'../excel/demographics/Child population by age group.xlsx'
+file_path2 = r'../excel/demographics/Child population by gender.xlsx'
+file_path3 = r'../excel/demographics/Child population by nativity (4).xlsx'
+file_path4 = r'../excel/demographics/Child population by race and ethnicity.xlsx'
+file_path5 = r'../excel/demographics/Children in immigrant families in which resident parents are not U.S. citizens.xlsx'
+file_path6 = r'../excel/demographics/Children in immigrant families in which resident parents have been in the country five years or less.xlsx'
+file_path7 = r'../excel/demographics/Children in immigrant families.xlsx'
 
 value_mapping = {
     'United States': 'US',

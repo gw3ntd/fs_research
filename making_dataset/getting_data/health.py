@@ -2,68 +2,68 @@ import pandas as pd #type: ignore
 from making_csv import clean_csv
 
 #
-p1 = r"excel/health/2-year-olds who were immunized (1).xlsx"
-p2 = r"excel/health/2-year-olds who were immunized.xlsx"
+p1 = r"../excel/health/2-year-olds who were immunized (1).xlsx"
+p2 = r"../excel/health/2-year-olds who were immunized.xlsx"
 #
 
 #
-p3 = r"excel/health/Births to mothers who smoked during pregnancy (1).xlsx"
-p4 = r"excel/health/Births to mothers who smoked during pregnancy.xlsx"
+p3 = r"../excel/health/Births to mothers who smoked during pregnancy (1).xlsx"
+p4 = r"../excel/health/Births to mothers who smoked during pregnancy.xlsx"
 #
 
 #
-p5 = r"excel/health/Births to mothers with less than 12 years of education .xlsx"
-p6 = r"excel/health/Births to mothers with less than 12 years of education.xlsx"
+p5 = r"../excel/health/Births to mothers with less than 12 years of education .xlsx"
+p6 = r"../excel/health/Births to mothers with less than 12 years of education.xlsx"
 #
 
-p7 = r"excel/health/Births to unmarried women.xlsx"
+p7 = r"../excel/health/Births to unmarried women.xlsx"
 
 #
-p8 = r"excel/health/Births to women receiving late or no prenatal care 2.xlsx"
-p9 = r"excel/health/Births to women receiving late or no prenatal care.xlsx"
+p8 = r"../excel/health/Births to women receiving late or no prenatal care 2.xlsx"
+p9 = r"../excel/health/Births to women receiving late or no prenatal care.xlsx"
 #
 
 
-p10 = r"excel/health/Child and teen death rate.xlsx"
-p11 = r"excel/health/Child deaths.xlsx"
-p12 = r"excel/health/Children age 18 and below without health insurance.xlsx"
-p13 = r"excel/health/Children and teens with anxiety or depression.xlsx"
-p14 = r"excel/health/Children who have a parent with no health insurance.xlsx"
+p10 = r"../excel/health/Child and teen death rate.xlsx"
+p11 = r"../excel/health/Child deaths.xlsx"
+p12 = r"../excel/health/Children age 18 and below without health insurance.xlsx"
+p13 = r"../excel/health/Children and teens with anxiety or depression.xlsx"
+p14 = r"../excel/health/Children who have a parent with no health insurance.xlsx"
 
 #
-p15 = r"excel/health/Children who have one or more emotional, behavioral, or developmental conditions 2.xlsx"
-p16 = r"excel/health/Children who have one or more emotional, behavioral, or developmental conditions 3.xlsx"
-p17 = r"excel/health/Children who have one or more emotional, behavioral, or developmental conditions.xlsx"
-#
-
-#
-p18 = r"excel/health/Children who have received preventive dental care in the past year (1).xlsx"
-p19 = r"excel/health/Children who have received preventive dental care in the past year.xlsx"
+p15 = r"../excel/health/Children who have one or more emotional, behavioral, or developmental conditions 2.xlsx"
+p16 = r"../excel/health/Children who have one or more emotional, behavioral, or developmental conditions 3.xlsx"
+p17 = r"../excel/health/Children who have one or more emotional, behavioral, or developmental conditions.xlsx"
 #
 
 #
-p20 = r"excel/health/Children whose teeth are in excellent or very good condition (1).xlsx"
-p21 = r"excel/health/Children whose teeth are in excellent or very good condition.xlsx"
+p18 = r"../excel/health/Children who have received preventive dental care in the past year (1).xlsx"
+p19 = r"../excel/health/Children who have received preventive dental care in the past year.xlsx"
 #
 
 #
-p22 = r"excel/health/Children with asthma problems (1).xlsx"
-p23 = r"excel/health/Children with asthma problems.xlsx"
+p20 = r"../excel/health/Children whose teeth are in excellent or very good condition (1).xlsx"
+p21 = r"../excel/health/Children whose teeth are in excellent or very good condition.xlsx"
 #
 
 #
-p24 = r"excel/health/Children with special health care needs (2).xlsx"
-p25 = r"excel/health/Children with special health care needs.xlsx"
+p22 = r"../excel/health/Children with asthma problems (1).xlsx"
+p23 = r"../excel/health/Children with asthma problems.xlsx"
 #
 
-p26 = r"excel/health/High school students who felt sad or hopeless during the past year.xlsx"
-p27 = r"excel/health/Infant mortality.xlsx"
-p28 = r"excel/health/Low birth-weight babies.xlsx"
-p29 = r"excel/health/Parents without health insurance.xlsx"
-p30 = r"excel/health/Preterm births.xlsx"
-p31 = r"excel/health/Teen deaths from all causes.xlsx"
-p32 = r"excel/health/Total births.xlsx"
-p33 = r"excel/health/Total teen births.xlsx"
+#
+p24 = r"../excel/health/Children with special health care needs (2).xlsx"
+p25 = r"../excel/health/Children with special health care needs.xlsx"
+#
+
+p26 = r"../excel/health/High school students who felt sad or hopeless during the past year.xlsx"
+p27 = r"../excel/health/Infant mortality.xlsx"
+p28 = r"../excel/health/Low birth-weight babies.xlsx"
+p29 = r"../excel/health/Parents without health insurance.xlsx"
+p30 = r"../excel/health/Preterm births.xlsx"
+p31 = r"../excel/health/Teen deaths from all causes.xlsx"
+p32 = r"../excel/health/Total births.xlsx"
+p33 = r"../excel/health/Total teen births.xlsx"
 
 value_mapping = {
     'United States': 'US',

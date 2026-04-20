@@ -2,50 +2,50 @@ import pandas as pd # type: ignore
 from making_csv import clean_csv
 
 #
-p1 = r"excel/safety/Binge alcohol drinking among youths by age group (1).xlsx"
-p2 = r"excel/safety/Binge alcohol drinking among youths by age group (2).xlsx"
-p3 = r"excel/safety/Binge alcohol drinking among youths by age group.xlsx"
+p1 = r"../excel/safety/Binge alcohol drinking among youths by age group (1).xlsx"
+p2 = r"../excel/safety/Binge alcohol drinking among youths by age group (2).xlsx"
+p3 = r"../excel/safety/Binge alcohol drinking among youths by age group.xlsx"
 #
 
-p4 = r"excel/safety/Children entering foster care.xlsx"
-p5 = r"excel/safety/Children exiting foster care.xlsx"
-p6 = r"excel/safety/Children in child welfare system who have been adopted.xlsx"
-p7 = r"excel/safety/Children in foster care waiting for adoption.xlsx"
+p4 = r"../excel/safety/Children entering foster care.xlsx"
+p5 = r"../excel/safety/Children exiting foster care.xlsx"
+p6 = r"../excel/safety/Children in child welfare system who have been adopted.xlsx"
+p7 = r"../excel/safety/Children in foster care waiting for adoption.xlsx"
 
 #
-p9 = r"excel/safety/Children who are confirmed by child protective services as victims of maltreatment (1).xlsx"
-p10 = r"excel/safety/Children who are confirmed by child protective services as victims of maltreatment.xlsx"
-#
-
-#
-p11 = r"excel/safety/Children who are confirmed by child protective services as victims of maltreatment by maltreatment type (1).xlsx"
-p12 = r"excel/safety/Children who are confirmed by child protective services as victims of maltreatment by maltreatment type.xlsx"
-#
-
-
-#
-p14 = r"excel/safety/Cigarette use in the past month by age group (1).xlsx"
-p15 = r"excel/safety/Cigarette use in the past month by age group.xlsx"
+p9 = r"../excel/safety/Children who are confirmed by child protective services as victims of maltreatment (1).xlsx"
+p10 = r"../excel/safety/Children who are confirmed by child protective services as victims of maltreatment.xlsx"
 #
 
 #
-p16 = r"excel/safety/Illicit drug use other than marijuana by age group (1).xlsx"
-p17 = r"excel/safety/Illicit drug use other than marijuana by age group (2).xlsx"
-p18 = r"excel/safety/Illicit drug use other than marijuana by age group.xlsx"
+p11 = r"../excel/safety/Children who are confirmed by child protective services as victims of maltreatment by maltreatment type (1).xlsx"
+p12 = r"../excel/safety/Children who are confirmed by child protective services as victims of maltreatment by maltreatment type.xlsx"
+#
+
+
+#
+p14 = r"../excel/safety/Cigarette use in the past month by age group (1).xlsx"
+p15 = r"../excel/safety/Cigarette use in the past month by age group.xlsx"
 #
 
 #
-p19 = r"excel/safety/Marijuana use by age group (1).xlsx"
-p20 = r"excel/safety/Marijuana use by age group.xlsx"
+p16 = r"../excel/safety/Illicit drug use other than marijuana by age group (1).xlsx"
+p17 = r"../excel/safety/Illicit drug use other than marijuana by age group (2).xlsx"
+p18 = r"../excel/safety/Illicit drug use other than marijuana by age group.xlsx"
 #
 
 #
-p21 = r"excel/safety/Teens ages 12 to 17 who abused alcohol or drugs in the past year (1).xlsx"
-p22 = r"excel/safety/Teens ages 12 to 17 who abused alcohol or drugs in the past year (2).xlsx"
-p23 = r"excel/safety/Teens ages 12 to 17 who abused alcohol or drugs in the past year.xlsx"
+p19 = r"../excel/safety/Marijuana use by age group (1).xlsx"
+p20 = r"../excel/safety/Marijuana use by age group.xlsx"
 #
 
-p24 = r"excel/safety/Youth residing in juvenile detention, correctional and_or residential facilities.xlsx"
+#
+p21 = r"../excel/safety/Teens ages 12 to 17 who abused alcohol or drugs in the past year (1).xlsx"
+p22 = r"../excel/safety/Teens ages 12 to 17 who abused alcohol or drugs in the past year (2).xlsx"
+p23 = r"../excel/safety/Teens ages 12 to 17 who abused alcohol or drugs in the past year.xlsx"
+#
+
+p24 = r"../excel/safety/Youth residing in juvenile detention, correctional and_or residential facilities.xlsx"
 
 value_mapping = {
     'United States': 'US',

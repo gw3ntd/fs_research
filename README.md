@@ -25,7 +25,7 @@
 - **econ4:** % of children living in crowded housing
 - **econ5:** % of Children living in households that are owned
 - **econ6:** % of Children living in households with a high housing cost burden
-- **econ7:** % of Children whose parents lack secure employment
+- **econ7:** % of Children whose parents lack secure employment (redo)
 - **econ8:** % of Children with at least one unemployed parent
 - **econ9:** % of Low-income working families with children
 - **econ10:** Median family income among households with children
@@ -37,19 +37,19 @@
 - **educ2:** Children who have been expelled from school
 - **educ3:** Children who have been suspended from school
 - **educ4:** Children who have difficulty speaking English
-- **educ5:** Children who missed 11 or more days of school per year due to illness or injury
+- **educ5:** Children who missed 11 or more days of school per year due to illness or injury 
 - **educ6:** Educational attainment of population ages 25 to 34
 - **educ7:** Eighth grade math achievement levels
 - **educ8:** Eighth grade reading achievement levels
 - **educ9:** Eighth grade writing achievement levels
 - **educ10:** Fourth grade math achievement levels
-- **educ11:** Fourth grade science achievement levels
+- **educ11:** Fourth grade science achievement levels (retry)
 - **educ12:** Fourth grade writing achievement levels
 - **educ13:** Fourth graders who are chronically absent from school
 - **educ14:** Fourth graders who scored below proficient reading level by family income
 - **educ15:** Fourth graders who scored below proficient reading level by school income
 - **educ16:** Head Start enrollment by age group
-- **educ17:** High school students not graduating on time
+- **educ17:** High school students not graduating on time 
 - **educ18:** Young adults ages 18 to 24 not attending school, not working, and no degree beyond high school
 - **educ19:** Young adults ages 18 to 24 who are enrolled in or have completed college
 

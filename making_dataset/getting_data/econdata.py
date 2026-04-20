@@ -1,18 +1,20 @@
 import pandas as pd # type: ignore
 from making_csv import clean_csv, rename_new
 
-file_path1 = r'excel/econ/Children in extreme poverty.xlsx'
-file_path2 = r'excel/econ/Children in families that receive public assistance.xlsx'
-file_path3 = r'excel/econ/Children in poverty.xlsx'
-file_path4 = r'excel/econ/Children living in crowded housing.xlsx'
-file_path5 = r'excel/econ/Children living in households that are owned .xlsx'
-file_path6 = r'excel/econ/Children living in households with a high housing cost burden.xlsx'
-file_path7 = r'excel/econ/Children whose parents lack secure employment.xlsx'
-file_path8 = r'excel/econ/Children with at least one unemployed parent.xlsx'
-file_path9 = r'excel/econ/Low-income working families with children (3).xlsx'
-file_path10 = r'excel/econ/Median family income among households with children.xlsx'
-file_path11 = r'excel/econ/Unemployment rate of parents.xlsx'
-file_path12 = r'excel/econ/Youth not attending school and not working by age group.xlsx'
+
+file_path1 = r'../excel/econ/Children in extreme poverty.xlsx'
+file_path2 = r'../excel/econ/Children in families that receive public assistance.xlsx'
+file_path3 = r'../excel/econ/Children in poverty.xlsx'
+file_path4 = r'../excel/econ/Children living in crowded housing.xlsx'
+file_path5 = r'../excel/econ/Children living in households that are owned .xlsx'
+file_path6 = r'../excel/econ/Children living in households with a high housing cost burden.xlsx'
+file_path7 = r'../excel/econ/Children whose parents lack secure employment.xlsx'
+p7 = r'../excel/econ/p7.xlsx'
+file_path8 = r'../excel/econ/Children with at least one unemployed parent.xlsx'
+file_path9 = r'../excel/econ/Low-income working families with children (3).xlsx'
+file_path10 = r'../excel/econ/Median family income among households with children.xlsx'
+file_path11 = r'../excel/econ/Unemployment rate of parents.xlsx'
+file_path12 = r'../excel/econ/Youth not attending school and not working by age group.xlsx'
 
 value_mapping = {
     'United States': 'US',
@@ -99,6 +101,8 @@ highcostburden.rename(columns={'Data': 'econ6'}, inplace=True)
 # print(highcostburden.head())
 
 lacksecureemployment = clean_csv(file_path7, value_mapping)
+df7 = clean_csv(p7, value_mapping)
+lacksecureemployment = pd.concat([lacksecureemployment, df7], axis=0)
 lacksecureemployment.rename(columns={'Data': 'econ7'}, inplace=True)
 # print(lacksecureemployment.head())
 
@@ -123,7 +127,9 @@ unemprate.rename(columns={'Data': 'econ11'}, inplace=True)
 # print(unemprate.head())
 
 unempyouth = clean_csv(file_path12, value_mapping, column_name='Age group')
-unempyouth.rename(columns={'Data': 'econ12'}, inplace=True)
+unempyouth.rename(columns={'16 to 19': 'econ12: 16-19',
+                           "16 to 24": "econ12: 16-24",
+                           "20 to 24": "econ12: 20-24"}, inplace=True)
 # print(unempyouth.head())
 
 merge_1 = pd.merge(childreninextremepov, childreninfamsthatgetpublicassistance, on='LocYear', how="outer")
@@ -148,4 +154,4 @@ merge_10 = pd.merge(merge_9, unemprate, on='LocYear', how="outer")
 print(merge_10.shape)
 merge_11 = pd.merge(merge_10, unempyouth, on='LocYear', how="outer")
 print(merge_11.shape)
-merge_11.to_csv('econ.csv')
+merge_11.to_csv('../final_csv/econ.csv')
