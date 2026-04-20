@@ -54,3 +54,17 @@ def make_plots(og, new):
     for column in og:
         if og[column].dtype == 'float64':
             comp_dist(og, new, column)
+
+def plot_one(df, column):
+
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
+
+    df[column].plot(kind='kde', ax=ax)
+
+    ax.set_xlim(-5000, 5000)
+
+    lines, labels = ax.get_legend_handles_labels()
+    ax.legend(lines, labels, loc='best')
+
+    plt.show()

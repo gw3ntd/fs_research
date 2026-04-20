@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from sklearn.preprocessing import StandardScaler
 
 
 safe = pd.read_csv('../making_dataset/final_csv/safety.csv')
@@ -191,7 +192,22 @@ def make_plots(og, new):
 
 
 
-# make_plots(safe, imputed)
+make_plots(safe, imputed)
+
+scaler = StandardScaler()
+good_cols = [col for col in imputed.columns if col != 'LocYear']
+
+scaled_data = scaler.fit_transform(imputed[good_cols])
+
+scaled_df = pd.DataFrame(scaled_data, columns=good_cols, index=imputed.index)
+scaled_df['LocYear'] = imputed['LocYear'] 
+scaled_df = scaled_df[imputed.columns]
+
+scaled_df.drop('Unnamed: 0', axis=1, inplace=True)
+
+print(scaled_df.head())
+
+make_plots(scaled_df, scaled_df)
 
 # filtered_df = imputed[imputed['LocYear'].str.contains('-', na=False)]
 # print(filtered_df)
