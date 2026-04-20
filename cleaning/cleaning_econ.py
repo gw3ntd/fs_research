@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from cleaning_funcs import get_percent_missing, check_for_NR, check_for_S, impute, make_plots
+from sklearn.preprocessing import StandardScaler
 
 econ = pd.read_csv('../making_dataset/final_csv/econ.csv')
 econ = econ[~econ['LocYear'].str.contains("Alabama")]
@@ -69,7 +70,25 @@ econ['econ12: 20-24'] = econ['econ12: 20-24'].astype(float)
 
 imputed = econ.copy()
 imputed = impute(econ, imputed)
-make_plots(econ, imputed)
+# make_plots(econ, imputed)
+
+imputed.drop('econ2', axis=1, inplace=True)
+
+scaler = StandardScaler()
+good_cols = [col for col in imputed.columns if col != 'LocYear']
+
+scaled_data = scaler.fit_transform(imputed[good_cols])
+
+scaled_df = pd.DataFrame(scaled_data, columns=good_cols, index=imputed.index)
+scaled_df['LocYear'] = imputed['LocYear'] 
+
+scaled_df = scaled_df[imputed.columns]
+
+scaled_df.drop('Unnamed: 0', axis=1, inplace=True)
+
+print(scaled_df.head())
+
+make_plots(scaled_df, scaled_df)
 
 '''
 possibly bad list

@@ -1,8 +1,8 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from cleaning.cleaning_funcs import get_percent_missing, check_for_NR, check_for_S, impute, make_plots
-
+from cleaning_funcs import get_percent_missing, check_for_NR, check_for_S, impute, make_plots, plot_one
+from sklearn.preprocessing import StandardScaler
 
 health = pd.read_csv('../making_dataset/final_csv/health.csv')
 
@@ -113,6 +113,24 @@ imputed = impute(health, imputed)
 
 # make_plots(health, imputed)
 
-imputed.drop('hth3_4', axis=1, inplace=True)
-imputed.drop('hth5_6', axis=1, inplace=True)
-imputed.drop('hth8_9', axis=1, inplace=True)
+scaler = StandardScaler()
+good_cols = [col for col in imputed.columns if col != 'LocYear' and col != 'hth27' and col != 'hth31']
+
+scaled_data = scaler.fit_transform(imputed[good_cols])
+
+scaled_df = pd.DataFrame(scaled_data, columns=good_cols, index=imputed.index)
+scaled_df['LocYear'] = imputed['LocYear'] 
+scaled_df['hth27'] = imputed['hth27'] 
+scaled_df['hth31'] = imputed['hth31'] 
+
+scaled_df = scaled_df[imputed.columns]
+
+scaled_df.drop('Unnamed: 0', axis=1, inplace=True)
+
+# print(scaled_df.head())
+
+# make_plots(scaled_df, scaled_df)
+
+
+plot_one(scaled_df, 'hth27')
+plot_one(scaled_df, 'hth31')

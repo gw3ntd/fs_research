@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from cleaning_funcs import get_percent_missing, check_for_NR, check_for_S, impute, make_plots
+from sklearn.preprocessing import StandardScaler
 
 educ = pd.read_csv('../making_dataset/final_csv/educ.csv')
 educ = educ[~educ['LocYear'].str.contains("Alabama")]
@@ -157,7 +158,23 @@ educ['Data'] = educ['Data'].astype(float)
 
 imputed = educ.copy()
 imputed = impute(educ, imputed)
-make_plots(educ, imputed)
+# make_plots(educ, imputed)
+
+scaler = StandardScaler()
+good_cols = [col for col in imputed.columns if col != 'LocYear']
+
+scaled_data = scaler.fit_transform(imputed[good_cols])
+
+scaled_df = pd.DataFrame(scaled_data, columns=good_cols, index=imputed.index)
+scaled_df['LocYear'] = imputed['LocYear'] 
+
+scaled_df = scaled_df[imputed.columns]
+
+scaled_df.drop('Unnamed: 0', axis=1, inplace=True)
+
+print(scaled_df.head())
+
+make_plots(scaled_df, scaled_df)
 
 '''
 lowkey all of these are bad except for educ16

@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from cleaning_funcs import get_percent_missing, check_for_NR, check_for_S, impute, make_plots
+from sklearn.preprocessing import StandardScaler
 
 fam = pd.read_csv('../making_dataset/final_csv/fam.csv')
 
@@ -39,6 +40,23 @@ fam.drop('fam19', axis=1, inplace=True)
 imputed = fam.copy()
 imputed = impute(fam, imputed)
 make_plots(fam, imputed)
+
+
+scaler = StandardScaler()
+good_cols = [col for col in imputed.columns if col != 'LocYear']
+
+scaled_data = scaler.fit_transform(imputed[good_cols])
+
+scaled_df = pd.DataFrame(scaled_data, columns=good_cols, index=imputed.index)
+scaled_df['LocYear'] = imputed['LocYear'] 
+
+scaled_df = scaled_df[imputed.columns]
+
+scaled_df.drop('Unnamed: 0', axis=1, inplace=True)
+
+print(scaled_df.head())
+
+make_plots(scaled_df, scaled_df)
 
 # so actually most of the distributions look different... 
 # I should look up what this means
