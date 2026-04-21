@@ -212,3 +212,5 @@ make_plots(scaled_df, scaled_df)
 # filtered_df = imputed[imputed['LocYear'].str.contains('-', na=False)]
 # print(filtered_df)
 
+scaled_df.to_csv('cleaned_datasets/clean_safety.csv')
+

@@ -99,3 +99,5 @@ scaled_df.drop('Unnamed: 0', axis=1, inplace=True)
 # print(scaled_df.head())
 
 # make_plots(scaled_df, scaled_df)
+
+scaled_df.to_csv('cleaned_datasets/clean_demo.csv')

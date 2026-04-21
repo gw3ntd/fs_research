@@ -172,9 +172,11 @@ scaled_df = scaled_df[imputed.columns]
 
 scaled_df.drop('Unnamed: 0', axis=1, inplace=True)
 
-print(scaled_df.head())
+# print(scaled_df.head())
 
-make_plots(scaled_df, scaled_df)
+# make_plots(scaled_df, scaled_df)
+
+scaled_df.to_csv('cleaned_datasets/clean_educ.csv')
 
 '''
 lowkey all of these are bad except for educ16
