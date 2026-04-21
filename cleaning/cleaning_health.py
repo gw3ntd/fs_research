@@ -114,23 +114,35 @@ imputed = impute(health, imputed)
 # make_plots(health, imputed)
 
 scaler = StandardScaler()
-good_cols = [col for col in imputed.columns if col != 'LocYear' and col != 'hth27' and col != 'hth31']
+good_cols = [col for col in imputed.columns if col != 'LocYear' and col != 'hth27']
 
 scaled_data = scaler.fit_transform(imputed[good_cols])
 
 scaled_df = pd.DataFrame(scaled_data, columns=good_cols, index=imputed.index)
 scaled_df['LocYear'] = imputed['LocYear'] 
 scaled_df['hth27'] = imputed['hth27'] 
-scaled_df['hth31'] = imputed['hth31'] 
 
 scaled_df = scaled_df[imputed.columns]
 
 scaled_df.drop('Unnamed: 0', axis=1, inplace=True)
+scaled_df.drop('hth27', axis=1, inplace=True)
 
 # print(scaled_df.head())
 
 # make_plots(scaled_df, scaled_df)
 
 
-plot_one(scaled_df, 'hth27')
-plot_one(scaled_df, 'hth31')
+# plt.boxplot(scaled_df['hth27'])
+# plt.show()
+
+scaled_df['target'] = pd.qcut(imputed['hth27'], 3, labels=["Low", "Medium", "High"])
+
+
+# print(scaled_df.head())
+# plot_one(scaled_df, 'hth27')
+
+# plt.hist(scaled_df['target'])
+# plt.show()
+
+
+scaled_df.to_csv('cleaned_datasets/clean_health.csv')
